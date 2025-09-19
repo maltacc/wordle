@@ -25,7 +25,14 @@ def validateGuess(guess: str, word: str) -> list[str]:
     return colors
 
 if __name__ == "__main__":
-    print(validateGuess("apple", "allee"))
-    # should return [GREEN, GREY, GREY, YELLOW, GREEN]
-    print(validateGuess("BEARY", "ABBEY"))
-    # should return [YELLOW, YELLOW, YELLOW, GREY, GREEN]
+    for i in range(6): 
+        guess = input("Enter your guess with no spaces: ")
+        if len(guess) != 5: 
+            print("Guess must be 5 letters long")
+            continue
+        print(validateGuess(guess.upper(), "LATER"))
+        
+    # print(validateGuess("apple", "allee"))
+    # # should return [GREEN, GREY, GREY, YELLOW, GREEN]
+    # print(validateGuess("BEARY", "ABBEY"))
+    # # should return [YELLOW, YELLOW, YELLOW, GREY, GREEN]
